@@ -9,3 +9,5 @@ Determine if 10 mile per hour wind gusts or more have a larger average departure
 
 Cleaning Bank Marketing Campaign Data - TASKS: Split and tidy bank_marketing.csv, storing as three DataFrames called client, campaign, and economics, each containing the columns outlined in the notebook and formatted to the data types listed.
 Save the three DataFrames to csv files, without an index, as client.csv, campaign.csv, and economics.csv respectively.
+
+The .ipynb files are all raw assignment attempts. They are nowhere near perfect but do showcase what I understand about certain topics. 
