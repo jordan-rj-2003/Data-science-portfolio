@@ -1,13 +1,47 @@
-# Data-science-portfolio
-Portfolio of projects developed during my Master’s studies in Artificial Intelligence. Includes academic assignments and practical mini-projects applying data preprocessing, exploratory data analysis, machine learning, and AI methodologies.
+# Data Science & AI Project Portfolio
 
-FlightsDC - TASKS: Load the two CSV files into separate DataFrames. Explore the data and create any new columns that might benefit your analysis.
-For routes, calculate the average departure delays and highest number of canceled flights and store this as a DataFrame called routes_delays_cancels, resetting the index after calculating.
-For airlines, determine the average departure delays and the highest number of canceled flights and store this as a DataFrame called airlines_delays_cancels, resetting the index after calculating.
-Produce two bar graphs to show (1) the top 9 highest number of cancellations by route in a plot called top9_route_cancels_bar and (2) the top 9 highest average departure delays by airline in a plot called top9_airline_delays_bar.
-Determine if 10 mile per hour wind gusts or more have a larger average departure delay for both of SEA and PDX, setting wind_response to True if so and False if not.
+This repository contains projects completed during my Master’s in Artificial Intelligence.  
+Each project demonstrates applied skills in data preprocessing, exploratory data analysis (EDA), machine learning, and AI.
 
-Cleaning Bank Marketing Campaign Data - TASKS: Split and tidy bank_marketing.csv, storing as three DataFrames called client, campaign, and economics, each containing the columns outlined in the notebook and formatted to the data types listed.
-Save the three DataFrames to csv files, without an index, as client.csv, campaign.csv, and economics.csv respectively.
+## 📂 Projects
 
-The .ipynb files are all raw assignment attempts. They are nowhere near perfect but do showcase what I understand about certain topics. 
+### 🚀 FlightsDC Data Exploration
+Analyzed airline flight data to identify trends in departure delays and cancellations.  
+**Skills:** Data cleaning, EDA, visualization  
+**Tools:** Python, Pandas, Matplotlib
+
+➡️ See folder: `FlightsDC`
+
+---
+
+### 📊 Bank Marketing Data Cleaning
+Processed and organized raw bank marketing data into structured tables for analysis.  
+**Skills:** Data wrangling, feature engineering  
+**Tools:** Python, Pandas
+
+➡️ See folder: `Cleaning Bank Marketing Campaign Data`
+
+---
+
+### 🔍 NLP – LDA & Encoder-Decoder Tasks
+Explored natural language processing techniques using LDA topic modeling and encoder–decoder architectures.  
+**Skills:** Text preprocessing, NLP modeling  
+**Tools:** Python, NLP libraries
+
+➡️ See related notebooks
+
+---
+
+## 📌 How These Projects Show My Skills
+
+- *End-to-end workflows* — from raw data to insight/model  
+- *Clear documentation* — each folder contains a README explaining goals and results  
+- *Tools used in industry* — Python, Pandas, ML libraries
+
+---
+
+## 📫 Connect With Me
+
+LinkedIn: (your link here)  
+GitHub Profile: github.com/jordan-rj-2003
+
