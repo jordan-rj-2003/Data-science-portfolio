@@ -6,3 +6,6 @@ For routes, calculate the average departure delays and highest number of cancele
 For airlines, determine the average departure delays and the highest number of canceled flights and store this as a DataFrame called airlines_delays_cancels, resetting the index after calculating.
 Produce two bar graphs to show (1) the top 9 highest number of cancellations by route in a plot called top9_route_cancels_bar and (2) the top 9 highest average departure delays by airline in a plot called top9_airline_delays_bar.
 Determine if 10 mile per hour wind gusts or more have a larger average departure delay for both of SEA and PDX, setting wind_response to True if so and False if not.
+
+Cleaning Bank Marketing Campaign Data - TASKS: Split and tidy bank_marketing.csv, storing as three DataFrames called client, campaign, and economics, each containing the columns outlined in the notebook and formatted to the data types listed.
+Save the three DataFrames to csv files, without an index, as client.csv, campaign.csv, and economics.csv respectively.
