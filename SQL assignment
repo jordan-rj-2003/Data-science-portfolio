@@ -1,0 +1,89 @@
+CREATE TABLE Course (Course_Code VARCHAR(10) NOT NULL, Course_Name VARCHAR (20)
+NOT NULL, Dept_No INT NOT NULL, CONSTRAINT Course_Course_Code_pk PRIMARY
+KEY(Course_Code), CONSTRAINT Course_Dept_No_fk FOREIGN KEY(Dept_No) REFERENCES
+Department(Dept_No)); CREATE TABLE Tutor (Tutor_Id INT NOT NULL, Tutor_Name VARCHAR
+(20) NOT NULL, Dept_No INT NOT NULL, CONSTRAINT Tutor_Tutor_Id_pk PRIMARY
+KEY(Tutor_Id), CONSTRAINT Tutor_Dept_No_fk FOREIGN KEY(Dept_No) REFERENCES
+Department(Dept_No)); CREATE TABLE Department (Dept_No INT NOT NULL, Dept_Name
+VARCHAR (20) NOT NULL, CONSTRAINT Department_Dept_No_pk PRIMARY KEY(Dept_No));
+CREATE TABLE Student (Student_No VARCHAR(10) NOT NULL, Student_Name VARCHAR (20)
+NOT NULL, CONSTRAINT Student_Student_No_pk PRIMARY KEY(Student_No)); CREATE TABLE
+Module (Module_Code VARCHAR(10) NOT NULL, Module_Name VARCHAR (20) NOT NULL,
+CONSTRAINT Module_Module_Code_pk PRIMARY KEY(Module_Code)); CREATE TABLE
+Student_Module (Module_Code VARCHAR(10) NOT NULL, Student_No VARCHAR(10) NOT
+NULL, CONSTRAINT Student_Module_Module_Code_fk FOREIGN KEY(Module_Code)
+REFERENCES Module(Module_Code), CONSTRAINT Student_Module_Student_No_fk FOREIGN
+KEY(Student_No) REFERENCES Student(Student_No)); CREATE TABLE Course_Module
+(Module_Code VARCHAR(10) NOT NULL, Course_Code VARCHAR(10) NOT NULL, CONSTRAINT
+Course_Module_Module_Code_fk FOREIGN KEY(Module_Code) REFERENCES
+Module(Module_Code), CONSTRAINT Course_Module_Course_Code_fk FOREIGN
+KEY(Course_Code) REFERENCES Course(Course_Code)); ALTER TABLE Student ADD
+Course_Code VARCHAR(10) NOT NULL; ALTER TABLE Student ADD CONSTRAINT
+Student_Course_Code_fk FOREIGN KEY(Course_Code) REFERENCES Course(Course_Code);
+ALTER TABLE Student ADD GRADE INT NULL; Alter table Tutor add Tutor_Age INT NULL ALTER
+TABLE Student ADD Age INT NULL INSERT INTO DEPARTMENT(Dept_No, Dept_Name) VALUES
+(1, 'Computing'), (2, 'Engineering'), (3, 'Business'); INSERT INTO COURSE(COURSE_CODE,
+COURSE_NAME, DEPT_NO) VALUES ('CS101', 'Cyber Security', 1), ('ICT201', 'ICT', 1), ('COMP301',
+'Computer Science', 1), ('NET150', 'Networking', 1), ('SW200', 'Software Dev', 1); INSERT INTO
+TUTOR(Tutor_ID, Tutor_Name, Dept_No, Tutor_Age) VALUES (1, 'Alice Brown', 1, 42), (2, 'John
+Smith', 1, 37), (3, 'Karen White', 2, 51), (4, 'Paul Green', 3, 46), (5, 'David Chen', 1, 33); INSERT
+INTO MODULE(Module_Code, Module_Name) VALUES ('M101', 'Intro to Programming'), ('M102',
+'Database Systems'), ('M103', 'Networks'), ('M104', 'Ethical Hacking'), ('M105', 'Operating
+Systems'), ('M106', 'Web Development'), ('M107', 'Cloud Computing'), ('M108', 'Cyber Law'),
+('M109', 'Data Structures'), ('M110', 'AI Fundamentals'); INSERT INTO
+COURSE_MODULE(Module_Code, Course_Code) VALUES ('M101', 'CS101'), ('M104', 'CS101'),
+('M108', 'CS101'), ('M101', 'ICT201'), ('M102', 'ICT201'), ('M106', 'ICT201'), ('M101', 'COMP301'),
+('M102', 'COMP301'), ('M109', 'COMP301'), ('M110', 'COMP301'), ('M103', 'NET150'), ('M105',
+'NET150'), ('M107', 'NET150'), ('M102', 'SW200'), ('M106', 'SW200'), ('M109', 'SW200'); INSERT
+INTO STUDENT(Student_No, Student_Name, Age, Grade, Course_Code) VALUES ('S001', 'Emily
+Clarke', 20, 78, 'CS101'), ('S002', 'James Turner', 22, 65, 'ICT201'), ('S003', 'Sophia Patel', 19, 82,
+'COMP301'), ('S004', 'Michael Jones', 21, 74, 'NET150'), ('S005', 'Olivia Reed', 23, 69, 'SW200'),
+('S006', 'Daniel Harris', 20, 88, 'CS101'), ('S007', 'Liam Wilson', 24, 58, 'ICT201'), ('S008', 'Grace
+Lewis', 18, 90, 'COMP301'), ('S009', 'Ethan Johnson', 22, 71, 'NET150'), ('S010', 'Ava Morgan', 21,
+66, 'SW200'), ('S011', 'Ryan Hughes', 19, 79, 'CS101'), ('S012', 'Zara Bennett', 25, 62, 'ICT201'),
+('S013', 'Caleb Moore', 23, 83, 'COMP301'), ('S014', 'Holly Adams', 20, 91, 'NET150'), ('S015',
+'Jacob Foster', 26, 55, 'SW200'), ('S016', 'Mia Carter', 18, 87, 'CS101'), ('S017', 'Nathan Price', 27,
+48, 'ICT201'), ('S018', 'Ella Gray', 22, 73, 'COMP301'), ('S019', 'Owen Scott', 21, 64, 'NET150'),
+('S020', 'Chloe Ward', 20, 92, 'SW200'), ('S021', 'Harvey King', 23, 53, 'CS101'), ('S022', 'Ruby
+Walsh', 19, 85, 'ICT201'), ('S023', 'Tyler Shaw', 28, 61, 'COMP301'), ('S024', 'Abigail Fox', 24, 76,
+'NET150'), ('S025', 'Leo Barker', 22, 59, 'SW200'), ('S026', 'Sienna Hart', 21, 88, 'CS101'), ('S027',
+'Callum Webb', 29, 47, 'ICT201'), ('S028', 'Isla Boyd', 18, 94, 'COMP301'), ('S029', 'Mason Doyle',
+23, 68, 'NET150’), ('S030', 'Freya Kemp', 20, 81, 'SW200'); INSERT INTO
+STUDENT_MODULE(Student_No, Module_Code) VALUES ('S001','M101'),('S001','M104'),
+('S002','M101'),('S002','M106'), ('S003','M101'),('S003','M109'), ('S004','M103'),('S004','M105'),
+('S005','M102'),('S005','M109'), ('S006','M104'),('S006','M108'), ('S007','M102'),('S007','M106'),
+('S008','M102'),('S008','M110'), ('S009','M103'),('S009','M107'), ('S010','M106'),('S010','M109'),
+('S011','M108'),('S011','M101'), ('S012','M106'),('S012','M102'), ('S013','M109'),('S013','M110'),
+('S014', 'M103'),('S014','M105'), ('S015','M109'),('S015','M106'), ('S016','M101'),('S016','M104'),
+('S017','M106'),('S017','M102'), ('S018','M110'),('S018','M109'), ('S019','M107'),('S019','M103'),
+('S020','M102'),('S020','M106'), ('S021','M108'),('S021','M101'), ('S022','M101'),('S022','M102'),
+('S023','M109'),('S023','M101'), ('S024','M105'),('S024','M107'), ('S025','M102'),('S025','M109'),
+('S026','M104'),('S026','M108'), ('S027','M102'),('S027','M106'), ('S028','M109'),('S028','M110'),
+('S029','M103'),('S029','M105'), ('S030','M106'),('S030','M102');
+
+Select tutor_name, round(avg(grade)) as average_grade
+from student, tutor
+where student.tutor_id = tutor.tutor_id
+group by tutor_name
+order by average_grade;
+
+select course_name, (max(age) - min(age)) as range_age, max(age) as max_age
+from course, student
+where course.course_code = student.course_code
+group by course_name;
+
+select module_name, round(avg(grade)) as average_grade
+from
+(select student_name, module_name, grade
+from student, module, student_module
+where student_module.module_code = module.module_code AND
+student_module.student_no = student.student_no
+order by student.grade)
+group by module_name
+order by average_grade
+
+select course_name, module_name
+from course, module, course_module
+where course_module.course_code = course.course_code And
+course_module.module_code = module.module_code
+AND (Module_Name = 'Web Development' or Module_Name = 'Database Systems')
