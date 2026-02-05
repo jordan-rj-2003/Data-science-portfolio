@@ -1,0 +1,71 @@
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("bank_marketing.csv")
+df.head()
+client = df[['client_id', 'age', 'job', 'marital', 'education', 'credit_default', 'mortgage']]
+def cleaning(df, column, astype, replace, inplace):
+    
+    df[column] = df[column].astype(astype)
+    try:
+        df[column] = df[column].str.replace(replace, inplace)
+    except:
+        df[column] = df[column].replace(replace, inplace)
+    return df[column]
+def conversion(df, column, astype1, astype2):
+    df[column] = df[column].astype(astype1)
+    df[column] = df[column].astype(astype2)
+    return df[column]
+
+client['job'] = cleaning(client, 'job', 'str', '.', '_')
+
+client['education'] = cleaning(client, 'education', 'str', '.', '_')
+client['education'] = client['education'].replace('unknown', np.nan)
+
+client['credit_default'] = cleaning(client, 'credit_default', 'str', ('unknown', 'no'), '0')
+client['credit_default'] = cleaning(client, 'credit_default', 'str', 'yes', '1')
+client['credit_default'] = conversion(client, 'credit_default', 'int', 'bool')
+
+client['mortgage'] = cleaning(client, 'mortgage', 'str', ('unknown', 'no'), '0')
+client['mortgage'] = cleaning(client, 'mortgage', 'str', 'yes', '1')
+client['mortgage'] = conversion(client, 'mortgage', 'int', 'bool')
+client['mortgage'].value_counts()
+
+client['credit_default'].dtype
+
+df['year'] = 2022
+month_map = {'may': 5,
+            'jun': 6,
+            'jul': 7,
+            'aug': 8,
+            'oct': 10,
+            'nov': 11,
+            'dec': 12,
+            'mar': 3,
+            'apr': 4,
+            'sep': 9}
+df['month'] = df['month'].map(month_map)
+df['month'].unique()
+df['last_contact_date'] = pd.to_datetime(df[['year', 'month', 'day']]).dt.date
+df['last_contact_date'].head(20)
+type(df['last_contact_date'].iloc[0])
+
+campaign = df[['client_id', 'contact_duration', 'number_contacts', 'previous_campaign_contacts', 'previous_outcome', 'campaign_outcome', 'last_contact_date']]
+
+
+campaign['previous_outcome'] = cleaning(campaign, 'previous_outcome', 'str', ('nonexistent', 'failure'), '0')
+campaign['previous_outcome'] = cleaning(campaign, 'previous_outcome', 'str', 'success', '1')
+campaign['previous_outcome'] = conversion(campaign, 'previous_outcome', 'int', 'bool')
+
+campaign['campaign_outcome'] = cleaning(campaign, 'campaign_outcome', 'str', 'no', '0')
+campaign['campaign_outcome'] = cleaning(campaign, 'campaign_outcome', 'str', 'yes', '1')
+campaign['campaign_outcome'] = conversion(campaign, 'campaign_outcome', 'int', 'bool')
+
+campaign.head()
+
+df.head()
+economics = df[['client_id', 'euribor_three_months', 'cons_price_idx']]
+
+client.to_csv('client.csv', index=False)
+campaign.to_csv('campaign.csv', index=False)
+economics.to_csv('economics.csv', index=False)
