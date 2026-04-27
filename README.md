@@ -15,7 +15,7 @@ Approach:
 Key Skills:
 Deep Learning, CNNs, Image Classification, Model Evaluation
 
-READ 'CNN REPORT'.
+READ 'REPORT.docx'.
 
 2. Medical Dataset Cleaning & Feature Engineering
    
