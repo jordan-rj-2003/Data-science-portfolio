@@ -10,7 +10,7 @@ Approach:
 - Built a Convolutional Neural Network (CNN) for multi-class image classification
 - Applied image preprocessing and normalisation
 - Experimented with architectural improvements to enhance performance
-- Evaluated model using accuracy and classification metrics thought WEIGHTS AND BIASES API.
+- Evaluated model using accuracy and classification metrics via WEIGHTS AND BIASES API.
 
 Key Skills:
 Deep Learning, CNNs, Image Classification, Model Evaluation
