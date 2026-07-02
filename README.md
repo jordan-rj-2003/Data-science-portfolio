@@ -1,3 +1,5 @@
+Recent: MSC Project code so far. Semantic Axis Projection for evaluating news credibility. Axis Created.
+
 This repository contains a selection of machine learning and deep learning projects completed as part of my MSc in Artificial Intelligence. The projects demonstrate practical experience in data preprocessing, classical machine learning, and deep learning techniques including CNNs and feature engineering on large-scale datasets.
 
 1. Hand Gesture Classification using CNN
