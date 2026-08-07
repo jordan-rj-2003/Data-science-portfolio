@@ -13,7 +13,7 @@ touching whether the underlying facts are true.
 
 The method:
 
-1. Build a **semantic axis** in GloVe embedding space from two small, theory-grounded word sets —
+1. Build a **semantic axis** in GloVe embedding space from two theory-grounded word sets —
    e.g. `mean(honest, true, accurate, impartial, …) − mean(dishonest, untrue, inaccurate, biased, …)`
    — derived from BBC editorial guidelines, not invented ad hoc.
 2. Compress each article (or a structural zone of it — headline+lead / body / end) into a single
@@ -21,9 +21,6 @@ The method:
    entities so the score can't just be tracking *who* is mentioned.
 3. **Project** each document vector onto the axis via cosine similarity to get an interpretable
    score — no black-box classifier sits between the text and the number.
-
-A held-out SVM is used only to *sanity-check* that the axis-derived features carry real signal —
-it is never the ranking mechanism itself, so the score a reader sees stays fully explainable.
 
 ## Why GloVe over BERT
 
