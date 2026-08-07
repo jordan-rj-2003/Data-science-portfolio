@@ -142,7 +142,7 @@ is not a property of GloVe generally: tested against `positive`/`negative` vecto
 vocabulary splits 53.8/46.2 with near-symmetric thresholds. The asymmetry is built into the axis,
 and it is why the propaganda control text still ranks 11th of 12 rather than last.
 
-**The balance axis behaves better.** Scored against the 20,000 most frequent GloVe words, the
+**The balance axis behaves better, but is still limited.** Scored against the 20,000 most frequent GloVe words, the
 credibility axis shows a clear right-tailed skew while the balance axis is close to normal with
 symmetric poles. It also reads hyperbole correctly: `amazing`, `stunning` and `incredible` score
 *credible* on the original axis but *unbalanced* on this one.
