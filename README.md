@@ -237,7 +237,7 @@ listed in the dissertation's own references. Full policy:
 - **Construct validity.** The method cannot measure objective truth or credibility. It measures
   relative semantic framing, and the credibility axis conflates factual-accuracy language with
   impartiality language.
-- ** Conflation of conflicting language.** Static Embeddings don't capture dynamic meaning in the way
+- **Conflation of conflicting language.** Static Embeddings don't capture dynamic meaning in the way
   that contextual, transformer trained embeddings do. As a result, human understanding of 'credibility'
   could not be represented as it conflates truth and impartiality. The balance axis helps to diagnose this
   but has its own limitations.
