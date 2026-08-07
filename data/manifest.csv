@@ -1,0 +1,13 @@
+article_id,outlet,url,date,note
+A1,BBC,https://www.bbc.co.uk/sport/tennis/articles/cj48rn79kego,15/02/2025,straight announcement (picked over reaction piece cz7e4l2248wo)
+A2,Sky News,https://news.sky.com/story/jannik-sinner-world-number-one-gets-three-month-tennis-ban-over-doping-case-13309697,15/02/2025,
+A3,Sky Sports,https://www.skysports.com/tennis/news/12110/13309691/jannik-sinner-world-no-1-banned-from-tennis-for-three-months-over-doping-case-after-reaching-agreement-with-wada,15/02/2025,second Sky property included deliberately
+A4,ATP Tour,https://www.atptour.com/en/news/jannik-sinner-and-wada-statement-february-2025,15/02/2025,official governing-body statement not independent journalism
+A5,talkSPORT,https://talksport.com/tennis/2931264/jannik-sinner-banned-grand-slam-french-open/,15/02/2025,
+A6,ESPN,https://www.espn.com/tennis/story/_/id/43854993/no-1-jannik-sinner-gets-3-month-ban-doping-settlement,15/02/2025,
+A7,The Guardian,https://www.theguardian.com/sport/2025/feb/15/jannik-sinner-banned-from-tennis-for-three-months-in-doping-case-settlement-wada,15/02/2025,confirmed freely accessible by student
+A8,The Independent,https://www.independent.co.uk/sport/tennis/jannik-sinner-doping-ban-news-b2698778.html,15/02/2025,confirmed freely accessible by student
+A9,CBS Sports,https://www.cbssports.com/tennis/news/world-no-1-jannik-sinner-receives-three-month-suspension-for-positive-drug-tests-as-part-of-settlement/,15/02/2025,
+A10,Sports Illustrated,https://www.si.com/tennis/no-1-tennis-star-jannik-sinner-accepts-3-month-ban-in-doping-scandal-settlement,15/02/2025,
+A11,Yahoo Sports,https://sports.yahoo.com/world-no-1-jannik-sinner-accepts-3-month-suspension-to-settle-doping-case-154008026.html,15/02/2025,standing in for NYT's same-day coverage
+A12,NYT / The Athletic,https://www.nytimes.com/athletic/6088971/2025/01/26/jannik-sinner-tennis-grand-slams-record-doping-ban-appeal/,26/01/2025,deliberate exception to same-day rule; long-form color piece; see spec 001 Risk 7
