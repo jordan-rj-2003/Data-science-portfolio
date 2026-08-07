@@ -237,10 +237,10 @@ listed in the dissertation's own references. Full policy:
 - **Construct validity.** The method cannot measure objective truth or credibility. It measures
   relative semantic framing, and the credibility axis conflates factual-accuracy language with
   impartiality language.
-- **Information loss.** Threshold-cosine gating discards roughly 80% of tokens per article; the
-  representation is more separable but less complete.
-- **Margin is ignored.** Once a token clears the relevance gate it is weighted by rarity alone —
-  distance past the threshold does not contribute.
+- ** Conflation of conflicting language.** Static Embeddings don't capture dynamic meaning in the way
+  that contextual, transformer trained embeddings do. As a result, human understanding of 'credibility'
+  could not be represented as it conflates truth and impartiality. The balance axis helps to diagnose this
+  but has its own limitations.
 - **Topic vs credibility.** With single-event corpora, TF-IDF rarity means "rare within this event",
   not genuinely distinctive. Resolving this needs a much larger multi-event corpus.
 - **Length confound.** Survivor count and word count correlate with score (r ≈ 0.39–0.52 across
